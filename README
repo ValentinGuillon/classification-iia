@@ -1,0 +1,14 @@
+
+
+
+
+
+Consignes:
+
+Projet classification.
+
+Pour les projets, il s'agira de choisir une tâche de classification parmi les 466 proposées sur UCI : https://archive.ics.uci.edu/ml/datasets.php?task=cla
+
+Pour le problème choisi, il faudra sélectionner plusieurs modèles (au moins trois), par exemple proposés par scikit-learn (https://scikit-learn.org/stable/supervised_learning.html), les appliquer, en particulier penser à la validation croisée pour l'étape d'apprentissage, et comparer les résultats et comportements.
+
+Le tout fera l'objet d'un petit rapport (dix pages grand maximum), au format établi par Farès Belhadj (https://expreg.org/amsi/C/LIV/)
