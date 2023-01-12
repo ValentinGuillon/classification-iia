@@ -1,0 +1,44 @@
+(je n'arrive jamais à utiliser Latex quand il y a un style imposé)
+
+
+Projet:
+Classification
+
+Consignes:
+Choisir une base de données (https://archive.ics.uci.edu/ml/datasets.php?task=cla)
+Utiliser 3 méthodes de classification dessus (https://scikit-learn.org/stable/supervised_learning.html)
+
+Programmeur:
+Valentin GUILLON, 20002588, Paris 8, Licence STN, L2 Semestre 1
+
+
+
+Base de donnée choisie : https://archive.ics.uci.edu/ml/datasets/Mushroom
+
+Méthodes choisies : Decision Tree (et c'est tout)
+
+
+
+Les données sont d'abord extraites du fichier .data, et sont stockées dans une liste de liste* de str (une liste* étant une donnée)
+Une fois fait, je determine les modalités de chaque attributs (attributs données en amont), que je stocke sous forme de dictionnaire {nom d'attribut: modalités de l'attribut, ...}
+Et enfin, j'isole la classe dans un tuple (nom et modalités)
+
+
+Decision Tree:
+    L'arbre est représenté par une classe Tree(), contenant une liste de Tree() (sous-arbres), et recevant les données définies par les trois variables décrites ci-dessus
+
+    Chaque noeud (Tree()), est définis comme suit:
+        - attribut : nom et modalité de celui-ci
+        - modalité : modalité de l'attribut parent
+        - subTrees : liste des sous-arbres
+
+
+    L'important du programme réside dans le fait suivant; comment définir l'attribut du noeud actuel ?
+
+    Pour cela, on calcule l'entropie (Gini) de chaque attributs.
+    L'attribut ayant l'entropie optimal (la plus grande pour Gini), sera l'attribut du noeud.
+
+    On va ensuite créer les sous-arbres.
+    Donc, pour chaque modalités de l'attribut choisi, on va ajouté un Tree() au noeud, auquel on va donner uniquement les données correspondantes à la modalité en cours de l'attribut du noeud actuel. Evidemment, si aucunes données n'existe, le sous-arbre n'est pas créé)
+
+    La création est terminée quand, dans chaque branche, il n'y a plus de données

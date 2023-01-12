@@ -1,5 +1,16 @@
 
+How to use :
+Ce placer dans le même répertoire que "decision-tree-creation.py"
+Executer la commande :
+    $~ python3 decision-tree-creation.py
 
+
+
+Il est possible de choisir le mode d'affichage de l'arbre dans le terminal
+    tab ou block (aka jolie ou dégueulasse)
+Il est aussi possible d'avoir un affichage formaté pour un fichier .dot (!!! cette option est fonctionnel, mais peu détaillée, le rendu de l'abre sera donc dégueulasse (enfin plutôt illisible, étant donné la nature des noeuds))
+
+Ces deux informations sont modifiables dans les premières lignes de decision-tree-creation.py
 
 
 
